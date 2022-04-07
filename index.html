@@ -1,0 +1,68 @@
+<html>
+    <!--HEAD STARTS-->
+    <head>
+        <!--STYLE STARTS-->
+        <style>
+            #idH{
+    border-radius: 30px;
+    border-width: 2px;
+    border-color: black;
+}
+
+.clsP{
+    border-radius: 30px;
+    border-width: 2px;
+    border-color: black;
+}
+        </style>
+        <!--STYLE ENDS-->
+        <!--SCRIPT STARTS-->
+    <script>
+var vFName;
+var vLName;
+var vS = " ";
+var a = 16;
+var b = 5;
+var arrNames = [];
+
+function fn_Submit(){
+    var vFName = document.getElementById("idFN").value;
+    var vLName = document.getElementById("idLN").value;
+    var vFuName = vFName.concat(vS.concat(vLName));
+    arrNames.push(vFuName);
+    console.log(arrNames);
+    document.getElementById("idN").innerHTML = arrNames.join("<br>");
+    console.log(Math.sqrt(a));
+    console.log(Math.min(a, b));
+    console.log(Math.max(a, b));
+}
+    </script>
+    <!--SCRIPT ENDS-->
+    </head>
+    <!--HEAD ENDS-->
+    <!--BODY STARTS-->
+    <body>
+        <center>
+        <br>
+        <!--TEXT STARTS-->
+        <h1 id="idH">
+            Project on console
+        </h1>
+
+        <p class="clsP">
+            Write about Visual Studio and how to set it up
+        </p>
+        <p class="clsP">
+            Write about the console , why it's used, how to open it, and how to print items on the console.
+        </p>
+        <!--TEXT ENDS-->
+        <p>First name: </p> <input id="idFN">
+        <p>Last name: </p> <input id="idLN">
+        <br><br>
+        <button id="idS" onclick="fn_Submit()">Submit</button>
+        <br><br>
+        <p id="idN"></p>
+    </center>
+    </body>
+    <!--BODY ENDS-->
+</html>
